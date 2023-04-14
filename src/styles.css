@@ -1,0 +1,634 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url();
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    font-size: 16px;
+    font-family: 'Kumbh Sans', sans-serif;
+    /* overflow: hidden; */
+  }
+
+  .container {
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto; /* Alinha horizontalmente se tiver espaço, por causa que limitou a 1440px tem espaço em relação ao restante da tela, portanto alinha no centro */
+  }
+
+.wrapperHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    border-bottom: 2px solid hsl(223, 64%, 98%);
+}
+
+.optionsMenu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 450px;
+    gap: 35px;
+}
+
+.menuOp {
+    cursor: pointer;
+    position: relative;
+}
+
+.menuOp:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background-color:hsl(26, 100%, 55%);
+    bottom: -20px;
+    left: 0;
+    opacity: 0;
+}
+
+.menuOp:hover::after {
+    opacity: 1;
+}
+
+.logoSite {
+    cursor: pointer;
+}
+
+.itemMenu {
+    cursor: pointer;
+    color: hsl(220, 14%, 75%);
+}
+
+.menuUser {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 100px;
+}
+
+#iconUser {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.userIcon:hover img {
+    border: 2px solid #ff7d19;
+    border-radius: 50%; 
+    transition: all .3s ease;
+}
+
+.userIcon img {
+    border: 2px solid transparent;
+    transition: all .3s ease;
+    border-radius: 50%; 
+}
+
+.cartIcon {
+    /* position: relative; */
+    cursor: pointer;
+}
+
+.quantityCartIcon {
+    position: absolute;
+    top: -13px;
+    right: -10px;
+    background-color: #ff7d19;
+    border-radius: 50%;
+    width: 100%;
+    max-width: 19px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    /* display: none; */
+}
+
+.quantityCartIcon.active {
+    display: block;
+} 
+
+.containerCartIcon {
+    position: relative;
+}
+
+.containerCart {
+    position: absolute;
+    top: 40px;
+    right: -70px;
+    background-color: white;
+    box-shadow: 0 3px 8px rgb(0 0 0 / 24%);
+    width: 400px;
+    border-radius: 8px;
+    display: none;
+}
+
+.containerCart.active {
+    display: block;
+}
+
+.titleCartC {
+    padding: 1rem 2rem;
+    border-bottom: 2px solid hsl(223, 64%, 98%);
+    font-weight: bold;
+}
+
+.emptyCart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 180px;
+    font-weight: bold;
+    color: hsl(219, 9%, 45%);
+}
+
+.emptyCart.active {
+    display: block;
+}
+
+.infoPurchase {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    gap: 25px;
+}
+
+.buttonCheckout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.main-button {
+    background-color: #ff7d19;
+    padding: 14px 135px;
+    border: none;
+    outline: none;
+    color: white;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.trashCam {
+    cursor: pointer;
+}
+
+#product1Cart {
+    width: 100%;
+    max-width: 55px;
+    border-radius: 8px;
+}
+
+#product1 {
+    width: 100%;
+    max-width: 700px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.containerMiniFotos {
+    /* position: relative; */
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    max-width: 700px;
+}
+
+.productThumb {
+    /* position: relative; */
+    width: 100%;
+    /* max-width: 128px; */
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 30;
+}
+
+.productThumb:hover {
+    opacity: 0.5;
+}
+
+.shadowProductThumb {
+    z-index: 20;
+    top: 0;
+    right: 0;
+    width: 100%;
+    max-width: 168px;
+    height: 100%;
+    height: 142px;
+    border-radius: 8px;
+    background-color: black;
+}
+
+.containerBodyPage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 4rem;
+    width: 100%;
+    max-width: 1440px;
+    height: 100%;
+    max-height: 100vh;
+    padding-top: 5rem;
+}
+
+.sneakerCompany {
+    word-spacing: 5px;
+    color: #ff7d19;
+    font-weight: bold;
+    font-size: 19px;
+    margin-bottom: 50px;
+}
+
+.containerParteDir {
+    width: 100%;
+    max-width: 760px;
+}
+
+.titleParteDir {
+    font-weight: bold;
+    font-size: 45px;
+    margin-bottom: 35px;
+    /* margin-top: 50px; */
+}
+
+.textParteDir {
+    color: hsl(220, 14%, 75%);
+    font-size: 17px;
+    margin-bottom: 45px;
+}
+
+.valoresAtuais {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 12px;
+}
+
+.precoAtual {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.descontoAtual {
+    padding: 2.5px 7.5px;
+    background-color: #ffede0;
+    border-radius: 12px;
+    color: hsl(26, 100%, 55%);
+    font-weight: bold;
+}
+
+.valorDescAtual {
+    opacity: 1;
+    color: hsl(26, 100%, 55%);
+}
+
+.descontoAntigo {
+    color: #b6bcc8;
+    font-weight: 700;
+    font-size: 17px;
+    text-decoration: line-through;
+    margin-bottom: 25px;
+}
+
+.quantityCard {
+    display: flex;
+    align-items: center;
+    /* flex-direction: row; */
+    gap: 40px;
+}
+
+.optionsQuantity {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 290px;
+    height: 55px;
+    background-color: hsl(223, 64%, 98%);
+    border-radius: 12px;
+}
+
+.iconMinus {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.iconPlus {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.addToCard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#buttonAdd {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    border: none;
+    outline: none;
+    background-color: #ff7d19;
+    color: white;
+    font-weight: bold;
+    font-family: 'Kumbh Sans', sans-serif;
+    padding: 14px 100px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.containerOverlay {
+    position: absolute;
+    top: 140px;
+    right: 400px;
+    z-index: 200;
+}
+
+.fotoPrincOver {
+    width: 100%;
+    max-width: 600px;
+}
+
+.shadow {
+    position: fixed !important; /*pegar a tela inteira, ignora todas as outras condiçoes*/
+    left: 0; /* para começar do inicio da tela e não no containerde 1440px*/
+    width: 100%;
+    max-width: 100vw;
+    height: 100%;
+    max-height: 100vh;
+    background-color: black;
+    opacity: 0.6;
+    z-index: 100;
+}
+
+.containerMiniFotosOverl {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    gap: 15px;
+}
+
+.shadowProductThumbOverl {
+    top: 0;
+    right: 0;
+    width: 100%;
+    max-width: 168px;
+    height: 100%;
+    height: 139px;
+    border-radius: 8px;
+    background-color: black;
+}
+
+.iconCloseOverlay {
+    position: absolute;
+    top: -25px;
+    right: 0;
+    cursor: pointer;
+}
+
+.iconNextOverlay {
+    position: absolute;
+    top: 280px;
+    right: -20px;
+    background-color: white;
+    padding: 12px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.iconPrevOverlay {
+    position: absolute;
+    top: 280px;
+    left: -20px;
+    background-color: white;
+    padding: 12px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.iconsOverlayNP {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.iconNextM {
+    display: none;
+}
+
+.iconPrevM {
+    display: none;
+}
+
+.containerMenuOpen {
+    display: none;
+}
+
+.hamburguerM {
+    display: none;
+}
+
+@media(max-width: 375px) {
+
+
+    body {
+        overflow:auto;
+    }
+
+    .wrapperHeader {
+        padding-inline: 1rem;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        max-width: 375px;
+        margin: 0 auto;
+    }
+
+    .optionsMenu {
+        display: none;
+    }
+
+    .containerMiniFotos {
+        display: none;
+    }
+
+    .containerMiniFotosOverl {
+        display: none;
+    }
+
+    .shadow {
+        display: none;
+    }
+
+    .fotoPrinc {
+        position: relative;
+        width: 100%;
+        max-width: 375px;
+        margin-top: 0px;
+    }
+
+    .containerFotoPrincipalOverlay {
+        display: none;
+        width: 100%;
+        min-width: 425px;
+        position: absolute;
+        left: 25px;
+    }
+
+    .containerBodyPage {
+        position: relative;
+        flex-direction: column;
+        padding-block: 0rem;
+    }
+
+    .iconNextM {
+        position: absolute;
+        top: 165px;
+        right: 10px;
+        display: block;
+        background-color: white;
+        padding: 10px 15px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    
+    .iconPrevM {
+        position: absolute;
+        top: 165px;
+        left: 10px;
+        display: block;
+        background-color: white;
+        padding: 10px 15px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .quantityCard {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .containerParteDir {
+        padding-inline: 1.5rem;
+    }
+
+    .titleParteDir {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+
+    .textParteDir {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+
+    .sneakerCompany {
+        margin-bottom: 10px;
+        margin-top: -50px;
+        font-size: 16px;
+    }
+
+    .descontoAntigo {
+        margin-bottom: 0;
+    }
+
+    .valoresAtuais {
+        margin-bottom: 0;
+        gap: 13px;
+    }
+
+    .containerValores {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    .optionsQuantity {
+        height: 50px;
+    }
+
+    .main-button {
+        padding: 17px 75px;
+        gap: 50px;
+        flex-direction: row;
+        margin-bottom: 40px;
+    }
+
+    #addToCard {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .containerCart {
+        z-index: 400;
+        right: -85px;
+        width: 360px;
+    }
+
+    .shadowMenuOpen {
+        position: fixed;
+        top: 0;
+        right: -225px;
+        background-color: black;
+        /* padding-left: 150px;; */
+        width:100vw;
+        height: 100vh;
+        z-index: 80;
+        opacity: 0.6;
+    }
+
+    .containerMenuOpen {
+        display: none;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        padding-inline: 2.5rem;
+        padding-block: 1.25rem;
+        background-color: white;
+        height: 100%;
+        width: 225px;
+        z-index: 100;
+        opacity: 1;
+    }
+
+    .containerMenuOpen.active {
+        display: block;
+    }
+
+    .opMenuM {
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+
+    .closeMenuIcon {
+        margin-bottom: 40px;
+    }
+}
